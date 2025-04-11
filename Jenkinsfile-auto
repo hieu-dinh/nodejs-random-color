@@ -24,7 +24,7 @@ pipeline {
                                   {
                                       sh '''
                                         aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 613122529343.dkr.ecr.ap-southeast-1.amazonaws.com
-                                        docker tag nodejs-random-color:ver-${BUILD_ID} 613122529343.dkr.ecr.ap-southeast-1.amazonaws.com/nodejs-random-color:latest
+                                        docker tag nodejs-random-color:latest 613122529343.dkr.ecr.ap-southeast-1.amazonaws.com/nodejs-random-color:latest
                                         docker push 613122529343.dkr.ecr.ap-southeast-1.amazonaws.com/nodejs-random-color:latest
                                         '''
                                     }
